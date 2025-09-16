@@ -36,7 +36,9 @@ app.get(/.*/, (req, res) => {
   res.sendFile(path.join(__dirname, "../../frontend/dist/index.html"));
 });
 
-app.listen(PORT, async() => {
-    await connectDB();
-    console.log(`Server running on PORT: ${PORT}`)
-})
+// app.listen(PORT, async() => {
+//     await connectDB();
+//     console.log(`Server running on PORT: ${PORT}`)
+// })
+
+module.exports = app;
