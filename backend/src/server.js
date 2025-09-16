@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import cors from "cors"
 import cookieParser from "cookie-parser";
 import path from "path";
+import { fileURLToPath } from 'url';
 
 import authRoutes from "./routes/auth.route.js"
 import notesRoutes from "./routes/notes.route.js"
@@ -17,7 +18,8 @@ const app = express();
 
 const PORT = process.env.PORT || 5050;
 
-const __dirname = path.resolve();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 app.use(cors({ origin: "http://localhost:6050", credentials: true }));
 app.use(cookieParser());

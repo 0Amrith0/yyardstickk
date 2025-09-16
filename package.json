@@ -1,15 +1,15 @@
 {
-  "name": "backend",
+  "name": "yardstick",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "backend/src/server.js",
   "scripts": {
     "dev": "nodemon backend/src/server.js",
     "start": "node backend/src/server.js",
-    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
+    "build": "npm install --prefix frontend && npm run build --prefix frontend"
   },
   "keywords": [],
   "author": "",
-  "type":"module",
+  "type": "module",
   "license": "ISC",
   "description": "",
   "dependencies": {
